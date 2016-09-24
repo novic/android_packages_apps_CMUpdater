@@ -52,7 +52,7 @@ import com.cyanogenmod.updater.service.UpdateCheckService;
 import com.cyanogenmod.updater.utils.UpdateFilter;
 import com.cyanogenmod.updater.utils.Utils;
 
-import org.cyanogenmod.internal.util.ScreenType;
+//import org.cyanogenmod.internal.util.ScreenType;
 
 import java.io.File;
 import java.io.IOException;
@@ -183,9 +183,9 @@ public class UpdatesSettings extends PreferenceActivity implements
         }
 
         // If running on a phone, remove padding around the listview
-        if (!ScreenType.isTablet(this)) {
-            getListView().setPadding(0, 0, 0, 0);
-        }
+        //if (!ScreenType.isTablet(this)) {
+            //getListView().setPadding(0, 0, 0, 0);
+        //}
     }
 
     @Override
@@ -253,9 +253,9 @@ public class UpdatesSettings extends PreferenceActivity implements
         super.onResume();
 
         // If running on a phone, remove padding around the listview
-        if (!ScreenType.isTablet(this)) {
-            getListView().setPadding(0, 0, 0, 0);
-        }
+        //if (!ScreenType.isTablet(this)) {
+            //getListView().setPadding(0, 0, 0, 0);
+        //}
     }
 
     @Override
