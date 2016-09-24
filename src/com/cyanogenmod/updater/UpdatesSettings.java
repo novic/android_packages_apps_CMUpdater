@@ -633,7 +633,7 @@ public class UpdatesSettings extends PreferenceActivity implements
         mUpdatesList.removeAll();
 
         // Convert the installed version name to the associated filename
-        String installedZip = "cm-" + Utils.getInstalledVersion() + ".zip";
+        String installedZip = Utils.getDeviceType() + "-ota_update-" + Utils.getIncremental() + ".zip";
 
         // Determine installed incremental
         String installedIncremental = Utils.getIncremental();
