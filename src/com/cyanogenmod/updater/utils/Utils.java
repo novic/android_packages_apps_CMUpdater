@@ -62,6 +62,10 @@ public class Utils {
         return SystemProperties.get("ro.build.display.id");
     }
 
+    public static int getInstalledApiLevel() {
+        return SystemProperties.getInt("ro.build.version.sdk", 0);
+    }
+
     public static long getInstalledBuildDate() {
         return SystemProperties.getLong("ro.build.date.utc", 0);
     }
