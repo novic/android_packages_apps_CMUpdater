@@ -39,7 +39,6 @@ public class UpdateInfo implements Parcelable, Serializable {
     private String mUiName;
     private String mFileName;
     private Type mType;
-    private int mApiLevel;
     private long mBuildDate;
     private String mDownloadUrl;
     private String mChangelogUrl;
@@ -58,13 +57,6 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     public File getChangeLogFile(Context context) {
         return new File(context.getCacheDir(), mFileName + CHANGELOG_EXTENSION);
-    }
-
-    /**
-     * Get API level
-     */
-    public int getApiLevel() {
-        return mApiLevel;
     }
 
     /**
@@ -147,13 +139,7 @@ public class UpdateInfo implements Parcelable, Serializable {
             return mIsNewerThanInstalled;
         }
 
-        int installedApiLevel = Utils.getInstalledApiLevel();
-        if (installedApiLevel != mApiLevel && mApiLevel > 0) {
-            mIsNewerThanInstalled = mApiLevel > installedApiLevel;
-        } else {
-            // API levels match, so compare build dates.
-            mIsNewerThanInstalled = mBuildDate > Utils.getInstalledBuildDate();
-        }
+        mIsNewerThanInstalled = mBuildDate > Utils.getInstalledBuildDate();
 
         return mIsNewerThanInstalled;
     }
@@ -208,7 +194,6 @@ public class UpdateInfo implements Parcelable, Serializable {
         out.writeString(mUiName);
         out.writeString(mFileName);
         out.writeString(mType.toString());
-        out.writeInt(mApiLevel);
         out.writeLong(mBuildDate);
         out.writeString(mDownloadUrl);
         out.writeString(mMd5Sum);
@@ -219,7 +204,6 @@ public class UpdateInfo implements Parcelable, Serializable {
         mUiName = in.readString();
         mFileName = in.readString();
         mType = Enum.valueOf(Type.class, in.readString());
-        mApiLevel = in.readInt();
         mBuildDate = in.readLong();
         mDownloadUrl = in.readString();
         mMd5Sum = in.readString();
@@ -230,7 +214,6 @@ public class UpdateInfo implements Parcelable, Serializable {
         private String mUiName;
         private String mFileName;
         private Type mType = Type.UNKNOWN;
-        private int mApiLevel;
         private long mBuildDate;
         private String mDownloadUrl;
         private String mChangelogUrl;
@@ -270,11 +253,6 @@ public class UpdateInfo implements Parcelable, Serializable {
             return this;
         }
 
-        public Builder setApiLevel(int apiLevel) {
-            mApiLevel = apiLevel;
-            return this;
-        }
-
         public Builder setBuildDate(long buildDate) {
             mBuildDate = buildDate;
             return this;
@@ -305,7 +283,6 @@ public class UpdateInfo implements Parcelable, Serializable {
             info.mUiName = mUiName;
             info.mFileName = mFileName;
             info.mType = mType;
-            info.mApiLevel = mApiLevel;
             info.mBuildDate = mBuildDate;
             info.mDownloadUrl = mDownloadUrl;
             info.mChangelogUrl = mChangelogUrl;
