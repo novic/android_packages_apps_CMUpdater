@@ -55,7 +55,7 @@ public class Utils {
     }
 
     public static String getDeviceType() {
-        return SystemProperties.get("ro.cm.device");
+        return SystemProperties.get("ro.product.device");
     }
 
     public static String getInstalledVersion() {
