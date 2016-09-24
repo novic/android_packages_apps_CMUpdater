@@ -59,7 +59,7 @@ public class Utils {
     }
 
     public static String getInstalledVersion() {
-        return SystemProperties.get("ro.cm.version");
+        return SystemProperties.get("ro.build.display.id");
     }
 
     public static long getInstalledBuildDate() {
