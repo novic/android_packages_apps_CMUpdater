@@ -10,7 +10,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- General strings -->
-  <string name="app_name">Обновление CyanogenMod</string>
+  <string name="app_name">Обновление AnikOS Hardened</string>
   <string name="display_name">Обновления</string>
   <string name="unknown">Неизвестно</string>
   <!-- Menu and dialog box strings -->
@@ -24,8 +24,8 @@
   <string name="dialog_close">Закрыть</string>
   <!-- Settings strings -->
   <string name="available_updates_title">Доступные обновления</string>
-  <string name="no_available_updates_intro">Установлена последняя версия CyanogenMod. Нажмите кнопку «Проверить», чтобы выполнить поиск доступных обновлений.</string>
-  <string name="no_available_updates_intro_tv">Установлена последняя версия CyanogenMod. Нажмите кнопку «Сведения о системе», чтобы выполнить поиск доступных обновлений.</string>
+  <string name="no_available_updates_intro">Установлена последняя версия AnikOS Hardened. Нажмите кнопку «Проверить», чтобы выполнить поиск доступных обновлений.</string>
+  <string name="no_available_updates_intro_tv">Установлена последняя версия AnikOS Hardened. Нажмите кнопку «Сведения о системе», чтобы выполнить поиск доступных обновлений.</string>
   <string name="new_update_summary">Новое</string>
   <string name="downloaded_update_summary">Скачано на устройство</string>
   <string name="installed_update_summary">Установлено</string>
@@ -42,7 +42,7 @@
   <string name="no_updates_found">Нет доступных обновлений</string>
   <string name="update_check_failed">Не удалось выполнить поиск обновлений. Проверьте подключение к Интернету и повторите попытку.</string>
   <string name="not_new_updates_found_ticker">Доступно обновление системы</string>
-  <string name="not_new_updates_found_title">Обновления CyanogenMod</string>
+  <string name="not_new_updates_found_title">Обновления AnikOS Hardened</string>
   <string name="not_action_download">Загрузить</string>
   <string name="data_connection_required">Необходимо подключение к Интернету</string>
   <!-- Permission check -->
