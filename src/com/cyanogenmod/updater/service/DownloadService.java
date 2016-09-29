@@ -86,11 +86,6 @@ public class DownloadService extends IntentService
     }
 
     private String getServerUri() {
-        String propertyUri = SystemProperties.get("cm.updater.uri");
-        if (!TextUtils.isEmpty(propertyUri)) {
-            return propertyUri;
-        }
-
         return getString(R.string.conf_update_server_url_def);
     }
 
